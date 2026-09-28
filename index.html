@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Dream Academy - UG TRB Maths</title>
+    <style>
+        :root {
+            --primary-color: #1a237e;
+            --secondary-color: #ffb300;
+            --bg-color: #f5f7fa;
+            --text-color: #333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 25px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            font-size: 24px;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .nav-tabs {
+            display: flex;
+            justify-content: space-around;
+            background: white;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            color: #7f8c8d;
+            padding: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 33%;
+        }
+
+        .tab-btn.active {
+            color: var(--primary-color);
+            border-bottom: 4px solid var(--secondary-color);
+        }
+
+        .content-section {
+            display: none;
+            padding: 20px;
+            animation: fadeIn 0.4s;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card {
+            background: white;
+            padding: 18px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+            border-left: 6px solid var(--secondary-color);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+        }
+
+        h3 {
+            font-size: 18px;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+
+        p {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 12px;
+            font-size: 15px;
+            font-weight: bold;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #ffb300;
+            color: #1a237e;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            color: #777;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Digital Dream Academy</h1>
+        <p>UG TRB Maths - Study & Revision Portal</p>
+    </header>
+
+    <div class="nav-tabs">
+        <button class="tab-btn active" onclick="openTab('syllabus')">Syllabus</button>
+        <button class="tab-btn" onclick="openTab('materials')">Materials</button>
+        <button class="tab-btn" onclick="openTab('quiz')">Mock Test</button>
+    </div>
+
+    <!-- Syllabus Section -->
+    <div id="syllabus" class="content-section active">
+        <div class="card">
+            <h3>UNIT I: ALGEBRA and TRIGONOMETRY</h3>
+            <p>Theory of Equations, Matrices, Prime Numbers, Congruence Modulo n, Trigonometric Expansions, Hyperbolic Functions.</p>
+        </div>
+        <div class="card">
+            <h3>UNIT II: DIFFERENTIAL CALCULUS, INTEGRAL CALCULUS and ANALYTICAL GEOMETRY</h3>
+            <p>Leibnitz Theorem, Maxima/Minima, Multiple Integrals, Beta and Gamma Functions, Polar Coordinates.</p>
+        </div>
+        <div class="card">
+            <h3>UNIT III: DIFFERENTIAL EQUATIONS and LAPLACE TRANSFORMATIONS</h3>
+            <p>Ordinary & Partial Differential Equations, Lagrange's equation, Laplace transforms and properties.</p>
+        </div>
+        <div class="card">
+            <h3>UNIT IV: VECTOR CALCULUS and FOURIER SERIES, FOURIER TRANSFORMS</h3>
+            <p>Gradient, Divergence, Curl, Line & Surface Integrals, Fourier Series expansions, Parseval's identity.</p>
+        </div>
+        <div class="card">
+            <h3>UNIT V: ALGEBRAIC STRUCTURES</h3>
+            <p>Groups, Rings, Integral domain, Vector Space, Linear Transformation, Inner product spaces.</p>
+        </div>
+    </div>
+
+    <!-- Materials Section -->
+    <div id="materials" class="content-section">
+        <div class="card">
+            <h3>Handwritten Notes - Algebra (Tamil Medium)</h3>
+            <p>Complete handwritten notes for Unit 1 designed for easy revision.</p>
+            <button class="btn">Download PDF</button>
+        </div>
+        <div class="card">
+            <h3>Operations Research Shortcuts</h3>
+            <p>Quick formula guide for Simplex Method & Game Theory.</p>
+            <button class="btn">Download PDF</button>
+        </div>
+        <div class="card">
+            <h3>UG TRB Maths Previous Year Papers</h3>
+            <p>Last 5 years question papers with answer keys.</p>
+            <button class="btn">Download PDF</button>
+        </div>
+    </div>
+
+    <!-- Quiz Section -->
+    <div id="quiz" class="content-section">
+        <div class="card">
+            <h3>Unit I: Algebra Full Mock Test</h3>
+            <p>50 Questions | 60 Minutes | Real-time scoring</p>
+            <button class="btn">Start Exam Now</button>
+        </div>
+        <div class="card">
+            <h3>Daily Revision Quiz</h3>
+            <p>10 Quick Questions on Matrices and Prime Numbers.</p>
+            <button class="btn">Take Quiz</button>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Digital Dream Academy | Developed for UG TRB Aspirants
+    </footer>
+
+    <script>
+        function openTab(tabName) {
+            let i, sections, tabBtns;
+            sections = document.getElementsByClassName("content-section");
+            for (i = 0; i < sections.length; i++) {
+                sections[i].classList.remove("active");
+            }
+            tabBtns = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tabBtns.length; i++) {
+                tabBtns[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            event.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
